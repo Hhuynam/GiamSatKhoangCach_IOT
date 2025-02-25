@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1 class="text-center">Live Video Stream</h1>
+
+    <!-- Video Feed -->
+    <div class="text-center">
+        <img id="video_feed" src="{{ url_for('video_feed') }}" alt="Video Stream" class="img-fluid" style="width: 640px; height: 480px; border: 2px solid #000;">
+    </div>
+
+    <!-- Nút để lưu thời gian và ảnh -->
+    <div class="text-center mt-4">
+        <button id="save_time_button" class="btn btn-primary">Lưu Thời Gian và ảnh</button>
+    </div>
+
+    <!-- Hiển thị thời gian đã lưu và ảnh -->
+    <div class="text-center mt-4">
+        <p id="saved_time"></p>
+        <img id="saved_image" src="" class="img-fluid" width="320" height="240" style="display: none;">
+    </div>
+
+    <!-- Thêm nút để truy cập trang lịch sử -->
+    <div class="text-center mt-4">
+        <a href="/history" class="btn btn-secondary">Xem Lịch Sử</a>
+    </div>
+{% endblock %}
